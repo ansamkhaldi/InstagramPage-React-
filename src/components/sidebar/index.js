@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './index.css';
 import Instagram from './Instagram.svg';
 import { TiSocialInstagram } from 'react-icons/ti';
@@ -22,12 +22,10 @@ function Sidebar(props) {
           {sidebarData.map((item, index) => {
             return (
               <li key={index} className={item.cName}>
-                <p>
-                  {/* <Link to={item.path}> */}
+                <Link to={item.path} className="Link">
                   <span className="item-icon">{item.icon}</span>
                   <span className="item-title">{item.title}</span>
-                  {/* </Link> */}
-                </p>
+                </Link>
               </li>
             );
           })}
